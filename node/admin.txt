@@ -1,0 +1,40 @@
+1、若没有数据库：
+   项目目录
+   project01/data/cms.sql
+
+2、添加新闻
+   - 修改menu.html文件，将“添加新闻”的地址改     为：  
+      addnew.php
+   - 在项目的admin目录下 
+     将 addnew.html改名为addnew.php
+
+   - 页面乱码
+     zend
+     windows->Preferences->General->Workspace
+     ->Text file encoding
+       utf-8
+    - 修改新闻发布页面“addnew.php”
+       a、将新闻分类从数据库表cms_type中读取出来。
+
+新闻列表
+1、创建文件listnew.php
+2、在项目目录下创建 common目录
+3、在common目录下创建通用数据库配置文件
+   db.inc.php
+4、编辑 db.inc.php文件
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
