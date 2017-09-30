@@ -12,7 +12,7 @@ module.exports = {
 		contentBase: './index/html',
 		hot: true,
         inline:true,
-        port:8080,
+        port:3000,
         host:"localhost"
 
     },

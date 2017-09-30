@@ -1,25 +1,24 @@
 import React, {Component} from 'react';
 
-export class View extends Component {
+export class Text extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {};
-		console.log(this.props.children)
-		console.log(this.props.style)
-	}
+		this.state = {
 
+		};
+	}
 	render() {
 		if (typeof(this.props.if) == 'undefined') {
 			return (
-				<div style={this.props.style}>
+				<span>
 					{this.props.children}
-				</div>
+				</span>
 			);
 		} else if (this.props.if) {
 			return (
-				<div style={this.props.style}>
+				<span>
 					{this.props.children}
-				</div>
+				</span>
 			);
 		} else {
 			return null;
