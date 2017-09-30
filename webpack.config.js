@@ -9,10 +9,13 @@ module.exports = {
 		path: path.resolve(__dirname, 'bundle')
 	},
 	devServer: {
-		contentBase: './bundle',
+		contentBase: './index/html',
 		hot: true,
-		port: 8000
-	},
+        inline:true,
+        port:8080,
+        host:"localhost"
+
+    },
 	module: {
 		rules: [
 			{

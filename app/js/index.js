@@ -1,30 +1,30 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var Header = require('./header')
-class LikeButton extends React.Component {
-	constructor() {
-		super();
-		this.state = {
-			liked: false
-		};
+import React from 'react';
+import {render} from 'react-dom';
+import{Header} from "./header";
+import{View} from "./view";
 
-		this.handleClick = this.handleClick.bind(this);
-	}
 
-	handleClick() {
-		this.setState({liked: !this.state.liked});
-	}
+class App extends React.Component{
+    constructor(props, context) {
+        super(props, context);
+        this.state = {
+            content: [1,2,3,4,5,6]
+        };
+    }
+    componentDidMount() {
 
-	render() {
-		const text = this.state.liked ? 'liked' : 'haven\'t liked';
-		return (
-			<div>
-				<Header/>
-				<div onClick={this.handleClick} >You {text}
-					this. Click to toggle.
-				</div>
-			</div>
-		);
-	}
+    }
+    set(){
+
+    }
+
+    render() {
+
+        return (
+            <div  style={{height: 50, backgroundColor: 'blue'}} onClick={this.set.bind(this)}>
+                <View if={true} for={this.state.content}/>
+            </div>
+        );
+    }
 }
-ReactDOM.render(<LikeButton />, document.getElementById('app'));
+render(<App/>,document.getElementById("app"))
