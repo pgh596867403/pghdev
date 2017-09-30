@@ -1,8 +1,9 @@
 import React from 'react';
 import {render} from 'react-dom';
-import{Header} from "./header";
+import "./header";
 import{View} from "./view";
 import{Text} from "./text";
+import  Style from "./style.css";
 
 
 class App extends React.Component {
@@ -25,7 +26,7 @@ class App extends React.Component {
 
 		return (
 			<View style={{height: 50, backgroundColor: 'blue'}} onClick={this.set.bind(this)}>
-				<View if={true}>
+				<View if={true} className={Style['color']}>
 					<Text>ss</Text>
 					<Text>ss</Text>
 				</View>
